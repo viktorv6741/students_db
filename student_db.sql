@@ -1,7 +1,5 @@
 create database students_db;
 
-
-
 create table student(
     id int not null auto_increment,
     name varchar(30) not null,
