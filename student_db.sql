@@ -6,7 +6,7 @@ create table student(
     surname varchar(30) not null,
     age int not null,
     course varchar(30) not null,
-    phone_number int,
+    phone_number varchar(30),
     email varchar(30),
     primary key(id)
     );
@@ -20,11 +20,11 @@ create table subject(
 create table journal(
     id int not null auto_increment,
     mark int not null,
-    primary key(id),
     student_id int not null,
     foreign key(student_id) references student(id)
     on delete cascade on update cascade,
     subject_id int not null,
     foreign key(subject_id) references subject(id)
-    on delete cascade on update cascade
+    on delete cascade on update cascade,
+    primary key(id)
     );
